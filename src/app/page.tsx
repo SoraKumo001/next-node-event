@@ -25,7 +25,6 @@ export default function Page() {
           width: node.offsetWidth,
           height: node.offsetHeight,
         };
-        storeCtx.onStoreChange();
       }
     },
     data: { width: 0, height: 0 },

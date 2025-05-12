@@ -2,6 +2,10 @@
 
 意地でも useEffect を使わないサンプル
 
+node のサイズ変更イベントを取得し、コンポーネントに反映させる方法を示します  
+本来 useEffect でイベントを処理しますが、万能 hook の useSyncExternalStore で処理します  
+そんなに useEffect のことが嫌いなら、いっそのこと完全にお別れしましょう
+
 ![](./document/image.webp)
 
 ```tsx
@@ -32,7 +36,6 @@ export default function Page() {
           width: node.offsetWidth,
           height: node.offsetHeight,
         };
-        storeCtx.onStoreChange();
       }
     },
     data: { width: 0, height: 0 },
